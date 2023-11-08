@@ -1,0 +1,44 @@
+{
+  "name": "980aa1d7-8e38-4db7-a9de-2525dd2a9d6e",
+  "displayName": "Price",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "PRICE TODO" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.category = \"shirts\" AND $session.params.merch = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Shirts",
+    "name": "9bcc20dd-703c-46ad-932e-16603972d5e4"
+  }, {
+    "condition": "$session.params.category = \"music\" AND $session.params.album = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Music",
+    "name": "8259dd93-1c8d-43d9-8d90-911d1d7480e9"
+  }, {
+    "condition": "$session.params.category = \"music\" AND $session.params.merch = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Carrier",
+    "name": "40b139e2-c940-493c-9432-6acc97b7b917"
+  }, {
+    "condition": "$session.params.category = \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Product Overview",
+    "name": "23d18882-29c5-4988-85f9-10d0f48a72c4"
+  } ]
+}

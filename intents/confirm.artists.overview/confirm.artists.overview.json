@@ -1,0 +1,10 @@
+{
+  "name": "62a5bf33-dc18-46c4-9b33-b16edb921d31",
+  "displayName": "confirm.artists.overview",
+  "parameters": [ {
+    "id": "artist",
+    "entityType": "@Artist"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

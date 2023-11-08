@@ -1,3 +1,0 @@
-# dialogflow-test
-
-readme

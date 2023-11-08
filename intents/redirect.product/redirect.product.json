@@ -1,0 +1,10 @@
+{
+  "name": "1c762b15-b697-42f8-8e0b-1d1e59354822",
+  "displayName": "redirect.product",
+  "parameters": [ {
+    "id": "merch",
+    "entityType": "@Merch"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

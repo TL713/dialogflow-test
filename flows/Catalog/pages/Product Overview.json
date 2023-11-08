@@ -1,0 +1,215 @@
+{
+  "name": "3cf1fc8d-ecc0-40a2-8a22-3a2d4b25da96",
+  "displayName": "Product Overview",
+  "form": {
+    "parameters": [ {
+      "displayName": "artist",
+      "required": true,
+      "entityType": "@Artist",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "From which of these artists would you like to order merchandise?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "The Google Dolls"
+                }, {
+                  "text": "The Goo Fighters"
+                }, {
+                  "text": "Alice Googler"
+                }, {
+                  "text": "G's N' Roses"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To buy merchandise you can choose between the following artists: Alice Googler, G's N' Roses, The Google Dolls or The Goo Fighters. Which artist do you want to buy merchandise from?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "The Google Dolls"
+                  }, {
+                    "text": "The Goo Fighters"
+                  }, {
+                    "text": "Alice Googler"
+                  }, {
+                    "text": "G's N' Roses"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "b1e17c83-208e-4283-a8bd-89c7219eba51"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "To buy merchandise you can choose between the following artists: Alice Googler, G's N' Roses, The Google Dolls or The Goo Fighters. Which artist were you trying to mention?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "The Google Dolls"
+                  }, {
+                    "text": "The Goo Fighters"
+                  }, {
+                    "text": "Alice Googler"
+                  }, {
+                    "text": "G's N' Roses"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4dbc77f6-610a-4726-9b26-879e7969ba76"
+        } ]
+      },
+      "redact": true
+    }, {
+      "displayName": "merch",
+      "required": true,
+      "entityType": "@Merch",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which merchandise item do you want?" ]
+            },
+            "languageCode": "en"
+          }, {
+            "payload": {
+              "richContent": [ [ {
+                "options": [ {
+                  "text": "Shirts"
+                }, {
+                  "text": "Music"
+                }, {
+                  "text": "Tour movie"
+                } ],
+                "type": "chips"
+              } ] ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "We sell Shirts, Music or the Tour movie. Which of these items do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Shirts"
+                  }, {
+                    "text": "Music"
+                  }, {
+                    "text": "Tour movie"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8009912a-49ea-448e-873c-0bae8db327b0"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand which merchandise item you wanted to buy. You can choose between: Shirts, Music or the Tour movie. Which item do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Shirts"
+                  }, {
+                    "text": "Music"
+                  }, {
+                    "text": "Tour movie"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "90ffd75c-a6e9-4c4e-8d8f-ede1800493e3"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We sell shirts, music or the tour movie." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "redirect.shirts",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Shirts",
+    "name": "c5359e28-6302-4092-ac10-09684704861d"
+  }, {
+    "intent": "redirect.music",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Music",
+    "name": "3e7e94d5-8eed-4290-8746-74ff8f55a194"
+  }, {
+    "intent": "redirect.price",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Price",
+    "name": "137b3f80-b877-420a-8e74-1999bd8ac8be"
+  }, {
+    "condition": "$session.params.artist != null AND $session.params.merch != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright! $session.params.merch of $session.params.artist, let's go!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Product",
+    "name": "0ad8e5ba-33e6-4680-82ab-3fd6524bce68"
+  } ]
+}

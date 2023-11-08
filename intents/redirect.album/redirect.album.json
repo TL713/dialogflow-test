@@ -1,0 +1,10 @@
+{
+  "name": "75d8df31-64e1-44c3-87f0-5f2ab50d425f",
+  "displayName": "redirect.album",
+  "parameters": [ {
+    "id": "album",
+    "entityType": "@Album"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

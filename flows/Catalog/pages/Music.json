@@ -1,0 +1,98 @@
+{
+  "name": "748f9be4-71b8-4fe7-b0e4-381422c1bc57",
+  "displayName": "Music",
+  "form": {
+    "parameters": [ {
+      "displayName": "album",
+      "required": true,
+      "entityType": "@Album",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "You can choose between Greatest Hits and Live Album. Which of these do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Greatest Hits"
+                  }, {
+                    "text": "Live"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9a0faa4a-a4ca-4044-84f0-9a5ef940c515"
+        }, {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I couldn't understand if you want the album: Greatest Hit or Live. Which of these do you want?" ]
+              },
+              "languageCode": "en"
+            }, {
+              "payload": {
+                "richContent": [ [ {
+                  "options": [ {
+                    "text": "Greatest Hits"
+                  }, {
+                    "text": "Live"
+                  } ],
+                  "type": "chips"
+                } ] ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "27ebbd69-de35-490c-8b89-0fa5058d3493"
+        } ]
+      },
+      "redact": true
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We have a Greatest Hits Album or the Live Album. Which one do you want?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Greatest Hits"
+          }, {
+            "text": "Live"
+          }, {
+            "text": "Price?"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "category",
+      "value": "\t music"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "redirect.price",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Price",
+    "name": "80897e2a-87e0-4a05-8fc9-b9adf54a7901"
+  } ]
+}

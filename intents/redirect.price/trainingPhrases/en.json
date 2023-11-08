@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "How much does a ",
+      "auto": true
+    }, {
+      "text": "t-shirt",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": " cost?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}
