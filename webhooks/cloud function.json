@@ -1,0 +1,10 @@
+{
+  "name": "655ef5a3-b704-4984-aa4b-6d60c07ec47d",
+  "displayName": "cloud function",
+  "genericWebService": {
+    "uri": "https://us-central1-yc091852f9e69d8ad-tp.cloudfunctions.net/go-http-function"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

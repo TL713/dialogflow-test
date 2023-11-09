@@ -1,0 +1,24 @@
+{
+  "name": "aba6903b-c085-43d6-a996-a83d586a8138",
+  "displayName": "Order Confirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "shirts-agent-webhook",
+    "tag": "confirm"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can cancel your order within $session.params.cancel-period days. Goodbye." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3d96035f-4ea1-45d6-b569-f826a1d0e9a7"
+  } ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "3fcca992-4225-4fd1-8407-b9a80cbacaa9",
+  "displayName": "New Order",
+  "form": {
+    "parameters": [ {
+      "displayName": "artist",
+      "required": true,
+      "entityType": "@Artist",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    }, {
+      "displayName": "merch",
+      "required": true,
+      "entityType": "@Merch",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok, let's confirm this order." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.artist != null AND $session.params.merch != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Confirmation",
+    "name": "a4415b52-cb5e-4277-a937-2c0355ca1419"
+  } ]
+}

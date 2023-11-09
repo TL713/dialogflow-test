@@ -1,0 +1,10 @@
+{
+  "name": "2ad3636c-50ce-4c12-9aca-c9abb4f4e18c",
+  "displayName": "shirts-agent-webhook",
+  "genericWebService": {
+    "uri": "https://us-central1-yc091852f9e69d8ad-tp.cloudfunctions.net/shirts-agent-webhook"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

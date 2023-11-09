@@ -84,7 +84,7 @@
     } ],
     "setParameterActions": [ {
       "parameter": "category",
-      "value": "\t music"
+      "value": "music"
     } ]
   },
   "transitionRoutes": [ {

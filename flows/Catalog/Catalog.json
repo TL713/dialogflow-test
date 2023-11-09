@@ -57,6 +57,13 @@
     },
     "targetPage": "End Flow",
     "name": "b77e3c14-f11d-4163-bebb-c23e85bf90a9"
+  }, {
+    "intent": "order.new",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "New Order",
+    "name": "63579db0-c581-4cf9-ba16-9fa98a1fcf82"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",

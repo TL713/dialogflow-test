@@ -1,0 +1,23 @@
+{
+  "name": "86c03a7f-655d-4124-8cbb-0199d566c13d",
+  "displayName": "Order Process",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Order complete! Bye!" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "confirm.proceed.order",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "bb618fa0-7759-43e1-8111-aa5fae8b29db"
+  } ]
+}

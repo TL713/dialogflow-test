@@ -119,11 +119,11 @@
     "targetPage": "Price",
     "name": "43148ed1-66c0-41b6-b87d-1d2859591f50"
   }, {
-    "condition": "$page.params.shirtsize = \"null\"",
+    "condition": "$page.params.shirtsize != null",
     "triggerFulfillment": {
     
     },
-    "targetPage": "Product",
+    "targetPage": "Confirmation",
     "name": "160d6ead-fa0e-454c-bf5d-0718fddd9e96"
   } ]
 }

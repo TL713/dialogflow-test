@@ -1,0 +1,67 @@
+{
+  "name": "8cd26b2f-bcc6-44ad-b0b4-757f205e7cb0",
+  "displayName": "Webhook test",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome, I am the virtual agent hahahah of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I need an Alice CD."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "order.new"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, let's confirm this order." ]
+      }, {
+        "text": [ "You can receive your order for a CD of Alice Googler in 5 days." ]
+      }, {
+        "text": [ "You can cancel your order within 2 days. Goodbye." ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1699515158,
+    "nanos": 434031000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  }
+}

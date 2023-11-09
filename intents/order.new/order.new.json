@@ -1,0 +1,16 @@
+{
+  "name": "ae2a289e-b973-461a-95b3-3eecfabfecfa",
+  "displayName": "order.new",
+  "parameters": [ {
+    "id": "artist",
+    "entityType": "@Artist"
+  }, {
+    "id": "merch",
+    "entityType": "@Merch"
+  }, {
+    "id": "shirtsize",
+    "entityType": "@ShirtSize"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

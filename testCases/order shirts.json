@@ -1,0 +1,225 @@
+{
+  "name": "f106d376-67d7-4953-bbc9-1a31eec917ed",
+  "displayName": "order shirts",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Welcome, I am the virtual agent hahahah of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "alice"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, could you say that again?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "artisit"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I didn't get that. Can you repeat?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "artist"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.artists.overview"
+      },
+      "currentPage": {
+        "name": "Artist Overview",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "The following bands are signed with G-Records: Alice Googler, G's N' Roses, The Goo Fighters and The Google Dolls." ]
+      }, {
+        "text": [ "From which of these artists would you like to order merchandise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "shirt"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.shirts"
+      },
+      "currentPage": {
+        "name": "Shirts",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Do you want a longsleeve or a t-shirt?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "longsleeve"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Shirt Size",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "What shirt size do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "xl"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Confirmation",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "A Longsleeve of $session.params.artist size: XL costs $25. Shall I continue to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "confirm.proceed.order"
+      },
+      "currentPage": {
+        "name": "Order Process",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Order complete! Bye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "bye"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "redirect.end"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Catalog"
+      },
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1699511613,
+    "nanos": 156683000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
+  }
+}

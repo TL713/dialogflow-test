@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I want an "
+    }, {
+      "text": "Alice",
+      "parameterId": "artist",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "XL",
+      "parameterId": "shirtsize",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "longsleeve",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need an "
+    }, {
+      "text": "Alice",
+      "parameterId": "artist",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "CD",
+      "parameterId": "merch",
+      "auto": true
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}
