@@ -1,6 +1,6 @@
 {
-  "name": "01dad242-e71d-42e3-b6eb-372ba84d1cb3",
-  "displayName": "wip",
+  "name": "7efbc5c0-b941-4dca-b554-8da47efd1b40",
+  "displayName": "Buy longsleeve",
   "testCaseConversationTurns": [ {
     "userInput": {
       "isWebhookEnabled": true,
@@ -20,7 +20,7 @@
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Welcome, I am the virtual agent of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?" ]
+        "text": [ "Welcome, I am the virtual agent hahahah of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?" ]
       } ],
       "currentFlow": {
         "name": "Default Start Flow"
@@ -31,7 +31,7 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Which artists are signed with your label?"
+          "text": "artist"
         },
         "languageCode": "en"
       }
@@ -58,7 +58,7 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "The Google Dolls"
+          "text": "alice"
         },
         "languageCode": "en"
       }
@@ -69,7 +69,7 @@
         "flow": "Catalog"
       },
       "textResponses": [ {
-        "text": [ "The Google Dolls, great choice! Rock on!" ]
+        "text": [ "You want to rock with Alice Googler merchandise. Awesome!" ]
       }, {
         "text": [ "We sell shirts, music or the tour movie." ]
       }, {
@@ -84,27 +84,21 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "I am interested in buying a shirt"
+          "text": "shirts"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "triggeredIntent": {
-        "name": "redirect.artists.overview"
+        "name": "redirect.shirts"
       },
       "currentPage": {
-        "name": "Product Overview",
+        "name": "Shirts",
         "flow": "Catalog"
       },
       "textResponses": [ {
-        "text": [ "The following bands are signed with G-Records: Alice Googler, G's N' Roses, The Goo Fighters and The Google Dolls." ]
-      }, {
-        "text": [ "The Google Dolls, great choice! Rock on!" ]
-      }, {
-        "text": [ "We sell shirts, music or the tour movie." ]
-      }, {
-        "text": [ "Which merchandise item do you want?" ]
+        "text": [ "Do you want a longsleeve or a t-shirt?" ]
       } ],
       "currentFlow": {
         "name": "Catalog"
@@ -115,18 +109,87 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "A t-shirt"
+          "text": "longsleeve"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "currentPage": {
-        "name": "Product",
+        "name": "Shirt Size",
         "flow": "Catalog"
       },
       "textResponses": [ {
-        "text": [ "Alright! T-shirt of The Google Dolls, let's go!" ]
+        "text": [ "What shirt size do you want?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "a"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Shirt Size",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Please tell me the shirt size, such as XL." ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "xl"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Confirmation",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "A Longsleeve of Alice Googler size: XL costs $25. Shall I continue to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Catalog"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "go ahead"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "confirm.proceed.order"
+      },
+      "currentPage": {
+        "name": "Order Process",
+        "flow": "Catalog"
+      },
+      "textResponses": [ {
+        "text": [ "Order complete! Bye!" ]
       } ],
       "currentFlow": {
         "name": "Catalog"
@@ -134,11 +197,10 @@
     }
   } ],
   "creationTime": {
-    "seconds": 1698708899,
-    "nanos": 113683000
+    "seconds": 1699515377,
+    "nanos": 606461000
   },
   "testConfig": {
-    "flow": "Default Start Flow",
-    "page": "Start Page"
+    "flow": "Default Start Flow"
   }
 }
